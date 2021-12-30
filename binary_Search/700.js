@@ -5,15 +5,16 @@ var searchBST = function(root, val) {
         if(node){
                 traverse(node.left);
                 if(node.val == val){
-                    return node;
+                    res = node;
+                    return;
                 }
                 
                 traverse(node.right);
             }
-            return null;
         }
         
+        traverse(root);
+        return res;
         
-        return traverse(root);
         
 };
